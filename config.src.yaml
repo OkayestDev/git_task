@@ -1,0 +1,6 @@
+database:
+  host: localhost
+  port: 3306
+  username: fave_reads_user
+  password: password
+  databaseName: fave_reads_official_test

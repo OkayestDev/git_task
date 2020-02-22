@@ -1,0 +1,21 @@
+version: "3"
+services:
+  my-app:
+    build: .
+    ports:
+      - "3001:80"
+
+  db:
+    image: "postgres:11"
+    container_name: "postgres_database"
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=user
+      - POSTGRES_DB=GIT_TASK
+    ports:
+      - "3306:3306" 
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data: {}
